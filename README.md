@@ -2,7 +2,6 @@
 
 Stack utilizado:
 - Laravel 9 (PHP 8.1+)
-- Vue.js 2.6
 - MySQL
 - JWT – Autenticación con Bearer Token
 - Docker
