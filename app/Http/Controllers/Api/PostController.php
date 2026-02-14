@@ -59,10 +59,6 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        if ($post->user_id !== Auth::id()) {
-            return response()->json(['error' => 'No autorizado'], 403);
-        }
-
         $request->validate([
             'title' => 'sometimes|required|string|max:255',
             'content' => 'sometimes|required|string',
