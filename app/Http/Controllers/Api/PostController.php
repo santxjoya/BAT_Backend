@@ -74,10 +74,6 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        if ($post->user_id !== Auth::id()) {
-            return response()->json(['error' => 'No autorizado'], 403);
-        }
-
         $post->delete();
 
         return response()->json(['message' => 'Post eliminado']);
