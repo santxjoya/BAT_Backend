@@ -12,13 +12,11 @@ class CategoryFactory extends Factory
 
     public function definition()
     {
-        $name = $this->faker->word();
+        $name = $this->faker->unique()->word;
 
         return [
             'name' => ucfirst($name),
             'slug' => Str::slug($name),
-            'created_at' => now(),
-            'updated_at' => now(),
         ];
     }
 }
